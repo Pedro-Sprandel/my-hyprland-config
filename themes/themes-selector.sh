@@ -20,7 +20,8 @@ if [ -n "$SELECTED_THEME" ]; then
     cp "$THEMES_DIR/$SELECTED_THEME/colors.conf" "$HOME/.config/hypr/config/colors.conf"
     # Reiniciar componentes necessários
     hyprctl reload
-    pkill waybar && waybar &
+    pkill waybar
+    waybar & disown
     source "$HOME/.config/hypr/scripts/launch-hyprpaper.sh"
     notify-send "Tema alterado" "Tema $SELECTED_THEME aplicado com sucesso!"
 fi
