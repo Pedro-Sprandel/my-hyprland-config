@@ -1,5 +1,5 @@
 #!/bin/sh
 
 pkill hyprpaper
-export WP="~/.config/hypr/wallpapers/black-rocks.jpg"
+export WP="~/.config/hypr/wallpapers/koi-fish.png"
 hyprpaper & disown 
